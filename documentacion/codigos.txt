@@ -1,0 +1,1 @@
+<%@ MasterClass="Application.layouts.solo_login.login_layout"%>

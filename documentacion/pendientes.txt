@@ -1,0 +1,2 @@
+Hacer que el sistema acepte el login de quien refiere al nuevo usuario en la ventana de registro.
+se puede capturar via url y se le coloca el campo para que lo vea.

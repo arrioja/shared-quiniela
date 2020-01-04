@@ -1,0 +1,35 @@
+<com:TContent ID="cuerpo">
+<div align="center">
+
+
+    <com:TTable BorderColor="#ccc" BorderWidth="0"
+    GridLines="None" Width="90%">
+        <com:TTableRow BorderWidth="1" HorizontalAlign="Justify">
+            <com:TTableCell>
+                <com:TImageButton ImageUrl="imagenes/logos/arriojanet.png" 
+                OnClick="arriojaclick" ></com:TImageButton>
+                 <h1>"mercadopana.com" </h1> <h2>Es un sitio web desarrollado por Arrioja's Networks para mostrar
+                 clasificados de compra-venta de
+                 bienes y servicios dentro de la legalidad de las leyes Venezolanas e Internacionales.</h2>
+
+                <h4>Diseñado, Desarrollado y programado usando HTML, PHP, AJAX y Prado Framework (Derechos Reservados
+                respectivamente a cada uno de sus fabricantes).</h4>
+
+                <h4>Puede comunicarse con nosotros mediante el enlace "Contactos" de la parte inferior.</h4>
+                <div align="Center">
+                    <com:TImageButton ImageUrl="imagenes/logos/apache.gif" Height="50" Width="130"
+                                    OnClick="apacheclick" ></com:TImageButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <com:TImageButton ImageUrl="imagenes/logos/php.gif"
+                                    OnClick="phpclick" ></com:TImageButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <com:TImageButton ImageUrl="imagenes/logos/mysql.gif"
+                                    OnClick="mysqlclick" ></com:TImageButton>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <com:TImageButton ImageUrl="imagenes/logos/prado.gif"
+                                    OnClick="pradoclick" ></com:TImageButton>
+                </div>
+            </com:TTableCell>
+        </com:TTableRow>
+    </com:TTable>
+<br>
+
+</div>
+</com:TContent>

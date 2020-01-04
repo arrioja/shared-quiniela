@@ -1,0 +1,37 @@
+.titulos_formularios {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #E0DFE3;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: right;
+}
+
+.titulo_pote {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	text-align: center;
+    text-decoration:blink;
+}
+
+titulo_pote_monto {
+    
+}
+
+.datos_formularios {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.datos_drops {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 10px;
+}
+.encabezado_formularios {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #E0DFE3;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+}

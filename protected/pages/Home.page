@@ -1,0 +1,222 @@
+<com:TContent ID="cuerpo">
+        <com:TTable BorderWidth="0" CellPadding="0" CellSpacing="0" GridLines="None" Width="100%">
+            <com:TTableRow>
+                <com:TTableCell HorizontalAlign="Center" ColumnSpan="6">
+                    <com:TTable BorderWidth="0" CellPadding="0" CellSpacing="0" GridLines="None" Width="100%">
+                        <com:TTableRow>
+                            <com:TTableCell  Width="50%" HorizontalAlign="Center" VerticalAlign="Top">
+
+                                <com:XActiveDataGrid
+                                    ID="DataGrid_resultado"
+                                    Width="90%"
+                                    AllowPaging="false"
+                                    CellPadding="0"
+                                    CellSpacing="0"
+                                    GridLines="None"
+                                    HeaderStyle.BackColor="#29166F"
+                                    HeaderStyle.ForeColor="white"
+                                    HeaderStyle.Font.Size = "14px"
+                                    ItemStyle.BackColor="#BFCFFF"
+                                    ItemStyle.BorderColor="Black"
+
+                                    DataKeyField="id"
+                                    AlternatingItemStyle.BackColor="#E6ECFF"
+                                    AutoGenerateColumns="false"
+                                    OnItemDataBound="formatear"
+                                    ForeColor="black"
+                                    Caption="Los Resultados mas recientes"
+                                    BorderColor="black"
+
+                                    >
+                                    <com:XActiveBoundColumn
+                                        ID="grupo"
+                                        DataField="grupo"
+                                        ItemStyle.HorizontalAlign="Center"
+                                        HeaderText="Grupo"/>
+                                    <com:XActiveBoundColumn
+                                        ID="cod_partido"
+                                        DataField="cod_partido"
+                                        ItemStyle.HorizontalAlign="Center"
+                                        Visible = "False"
+                                        HeaderText="cod_partido"/>
+                                    <com:XActiveBoundColumn
+                                        ID="equipoa"
+                                        DataField="cod_equipo_a"
+                                        ItemStyle.HorizontalAlign="Center"
+                                        Visible = "False"
+                                        HeaderText="Equipo"/>
+                                    <com:XActiveBoundColumn
+                                        ID="equipob"
+                                        DataField="cod_equipo_b"
+                                        ItemStyle.HorizontalAlign="Center"
+                                        Visible = "False"
+                                        HeaderText="Equipo"/>
+                                    <com:XActiveBoundColumn
+                                        ID="nombreequipoa"
+                                        DataField="nombre_equipo_a"
+                                        ItemStyle.HorizontalAlign="Center"
+                                        HeaderText="Equipo 1"/>
+                                    <com:XActiveBoundColumn
+                                        ID="nombreequipob"
+                                        DataField="nombre_equipo_b"
+                                        ItemStyle.HorizontalAlign="Center"
+                                        HeaderText="Equipo 2"/>
+                                    <com:XActiveBoundColumn
+                                        ID="resultado"
+                                        DataField="resultado"
+                                        ItemStyle.HorizontalAlign="Center"
+                                        HeaderText="Resultado"/>
+                                    <com:XActiveBoundColumn
+                                        ID="equipo_ganador"
+                                        Visible = "False"
+                                        DataField="cod_ganador"
+                                        ItemStyle.HorizontalAlign="Center"
+                                        HeaderText="Ganador"/>
+                                </com:XActiveDataGrid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </com:TTableCell>
+                            <com:TTableCell Width="50%" HorizontalAlign="Center" VerticalAlign="Top">
+
+
+
+
+
+                                <com:XActiveDataGrid
+                                    ID="DataGrid_top_10"
+                                    Width="90%"
+                                    AllowPaging="false"
+                                    CellPadding="0"
+                                    CellSpacing="0"
+                                    GridLines="None"
+                                    HeaderStyle.BackColor="#29166F"
+                                    HeaderStyle.ForeColor="white"
+                                    HeaderStyle.Font.Size = "14px"
+                                    ItemStyle.BackColor="#BFCFFF"
+                                    ItemStyle.BorderColor="Black"
+                                    ItemStyle.Font.Size = "12px"
+                                    DataKeyField="id"
+                                    AlternatingItemStyle.BackColor="#E6ECFF"
+                                    AutoGenerateColumns="false"
+                                    ForeColor="black"
+                                    Caption="Quien esta punteando?"
+                                    BorderColor="black"
+                                    >
+                                    <com:XActiveBoundColumn
+                                        ID="cod_pago"
+                                        DataField="cod_pago"
+                                        ItemStyle.HorizontalAlign="Center"
+                                        HeaderText="Quiniela"/>
+                                    <com:XActiveBoundColumn
+                                        ID="nombre"
+                                        DataField="nombres"
+                                        ItemStyle.HorizontalAlign="Center"
+                                        HeaderText="Nombre"/>
+                                    <com:XActiveBoundColumn
+                                        ID="puntos"
+                                        DataField="puntos"
+                                        ItemStyle.HorizontalAlign="Center"
+                                        HeaderText="Pts"/>
+                                </com:XActiveDataGrid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            </com:TTableCell>
+                        </com:TTableRow>
+                    </com:TTable>
+                </com:TTableCell>
+            </com:TTableRow>
+            <com:TTableRow>
+                <com:TTableCell HorizontalAlign="Center" ColumnSpan="6">
+                    <br>
+                </com:TTableCell>
+            </com:TTableRow>
+            <com:TTableRow Visible="False" ID="row_menu">
+                <com:TTableCell HorizontalAlign="Center">
+                    <com:TImageButton AlternateText="Pagos" ID="btn_pagos" ImageUrl="imagenes/botones/pagos.png" OnClick="Page.ver_pagos"/><br>
+                </com:TTableCell>
+                <com:TTableCell HorizontalAlign="Center">
+                    <com:TImageButton ID="btn_correr" ImageUrl="imagenes/botones/correr_quiniela.png" OnClick="Page.ver_quinielas"/><br>
+                </com:TTableCell>
+                <com:TTableCell HorizontalAlign="Center">
+                    <com:TImageButton ID="btn_correr2" ImageUrl="imagenes/botones/grafico64.png" OnClick="Page.ver_resultados"/><br>
+                </com:TTableCell>
+                <com:TTableCell HorizontalAlign="Center">
+                    <com:TImageButton ID="btn_correr3" ImageUrl="imagenes/botones/clasificacion.png" OnClick="Page.ver_clasificacion"/><br>
+                </com:TTableCell>
+            </com:TTableRow>
+            <com:TTableRow Visible="False" ID="row_menu2">
+                <com:TTableCell HorizontalAlign="Center">
+                    Pagos / Cupones
+                </com:TTableCell>
+                <com:TTableCell HorizontalAlign="Center">
+                    Quinielas
+                </com:TTableCell>
+                <com:TTableCell HorizontalAlign="Center">
+                    Resultados
+                </com:TTableCell>
+                <com:TTableCell HorizontalAlign="Center">
+                    Clasificación
+                </com:TTableCell>
+            </com:TTableRow>
+            <com:TTableRow>
+
+            </com:TTableRow>
+            <com:TTableRow Visible="False" ID="row_menu_admon">
+                <com:TTableCell HorizontalAlign="Center">
+                    <com:TImageButton AlternateText="Revisar" ID="btn_admon_pagos" ImageUrl="imagenes/botones/policia.png" OnClick="Page.revisar_pagos"/><br>
+                </com:TTableCell>
+                <com:TTableCell HorizontalAlign="Center">
+                    <com:TImageButton ID="btn_correr11" ImageUrl="imagenes/botones/grafico64.png" OnClick="Page.registrar_resultado"/><br>
+                </com:TTableCell>
+                <com:TTableCell HorizontalAlign="Center">
+                    <com:TImageButton ID="btn_correr12" ImageUrl="imagenes/botones/correr_quiniela.png" OnClick="Page.ver_todas_quinielas"/><br>
+                </com:TTableCell>
+                <com:TTableCell HorizontalAlign="Center">
+                    <com:TImageButton ID="btn_correr13" ImageUrl="imagenes/botones/accounts.png" OnClick="Page.ver_usuarios"/><br>
+                </com:TTableCell>
+            </com:TTableRow>
+            <com:TTableRow Visible="False" ID="row_menu_admon2">
+                <com:TTableCell HorizontalAlign="Center">
+                    Estatus Pagos
+                </com:TTableCell>
+                <com:TTableCell HorizontalAlign="Center">
+                    Resultados
+                </com:TTableCell>
+                <com:TTableCell HorizontalAlign="Center">
+                    Quinielas
+                </com:TTableCell>
+                <com:TTableCell HorizontalAlign="Center">
+                    Usuarios
+                </com:TTableCell>
+            </com:TTableRow>
+        </com:TTable>
+</com:TContent>

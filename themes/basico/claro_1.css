@@ -1,0 +1,47 @@
+
+.titulos_claro_1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #e4f6fc;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: right;
+}
+
+
+
+.datos_claro_1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+    background-color: #fffdb3;
+	font-size: 12px;
+    text-align: left;
+}
+
+.datos_centrados_claro_1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+    background-color: #fffdb3;
+	font-size: 12px;
+    text-align: center;
+}
+
+.encabezado_claro_1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #e4f6fc;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+}
+
+.encabezado_claro_2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+}
+
+.titulos_claro_2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #e4f6fc;
+	font-weight: bold;
+}

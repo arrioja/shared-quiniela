@@ -1,0 +1,148 @@
+<com:TContent ID="cuerpo">
+<com:MensajeDiv ID="LTB"/>
+<div align="center">
+ <fieldset Align="Center" width="100%">
+    <legend>Registro de Pagos / Depositos / Transferencias.</legend>
+    <com:TTable BorderWidth="1" GridLines="Both" Width="100%">
+
+        <com:TTableRow BorderWidth="1">
+            <com:TTableCell CssClass="titulos_claro_1">
+                <com:TLabel Text="Número:"/>
+            </com:TTableCell>
+            <com:TTableCell CssClass="datos_claro_1" ColumnSpan="3">
+                <com:TActiveTextBox ID="txt_numero"
+                    MaxLength="25"
+                    Columns="30"/>
+                <com:TRequiredFieldValidator ID="val_nombre"
+                    ControlToValidate="txt_numero"
+                    ErrorMessage="Requerido."
+                    Display="Dynamic"/>
+            </com:TTableCell>
+        </com:TTableRow>
+
+        <com:TTableRow BorderWidth="1">
+            <com:TTableCell CssClass="titulos_claro_1">
+                <com:TLabel Text="Fecha:"/>
+            </com:TTableCell>
+            <com:TTableCell CssClass="datos_claro_1">
+                <com:TDatePicker ID="txt_fecha_nac"
+                    DateFormat="dd/MM/yyyy"
+                    Mode="ImageButton"
+                    InputMode="TextBox"
+                    Columns="10"/>
+                <com:TRequiredFieldValidator ID="val_fecha_nac"
+                    ControlToValidate="txt_fecha_nac"
+                    ErrorMessage="Requerido."
+                    Display="Dynamic"/>
+            </com:TTableCell>
+
+            <com:TTableCell CssClass="titulos_claro_1">
+                <com:TLabel Text="Monto:"/>
+            </com:TTableCell>
+            <com:TTableCell CssClass="datos_claro_1">
+                BsF.
+                <com:TActiveTextBox ID="txt_monto"
+                    Columns="12"
+                    AutoPostBack="True"
+                    CausesValidation="False"
+                    Text="100.00"
+                    Style="text-align:right"/>
+                <com:TRequiredFieldValidator ID="val_monto_1"
+                    ControlToValidate="txt_monto"
+                    ErrorMessage="Requerido"
+                    Display="Dynamic"/>
+                <com:TDataTypeValidator ID="val_monto_2"
+                    ControlToValidate="txt_monto"
+                    DataType="Float"
+                    ErrorMessage="Debe ser num&eacute;rico"
+                    Display="Dynamic"/>
+            </com:TTableCell>
+        </com:TTableRow>
+
+        <com:TTableRow>
+            <com:TTableCell HorizontalAlign="Right" ColumnSpan="4">
+                <com:TButton ID="btn_incluir"
+                    Text="Incluir"
+                    OnClick="btn_incluir_click"/>
+            </com:TTableCell>
+        </com:TTableRow>
+    </com:TTable>
+</fieldset>
+</div>
+    <br>
+        <com:XActiveDataGrid
+            ID="DataGrid"
+            Width="90%"
+            AllowPaging="true"
+            PagerStyle.Mode="Numeric"
+            PagerStyle.HorizontalAlign="Center"
+            PageSize="20"
+            CellPadding="0"
+            CellSpacing="0"
+            GridLines="None"
+            HeaderStyle.BackColor="#29166F"
+            HeaderStyle.ForeColor="white"
+            HeaderStyle.Font.Size = "14px"
+            ItemStyle.BackColor="#BFCFFF"
+            ItemStyle.BorderColor="Black"
+            ItemStyle.Font.Size = "12px"
+            DataKeyField="id"
+            AlternatingItemStyle.BackColor="#E6ECFF"
+            AutoGenerateColumns="false"
+            OnPageIndexChanged="changePage"
+            OnPagerCreated="pagerCreated"
+            OnItemDataBound="formatear"
+            ForeColor="black"
+            Caption="Listado de Pagos de Cupones de Quiniela Registrados"
+            BorderColor="black"
+            >
+            <com:XActiveBoundColumn
+                ID="numero"
+                DataField="numero"
+                ItemStyle.HorizontalAlign="Center"
+                HeaderText="Voucher / Registro"/>
+            <com:XActiveBoundColumn
+                ID="fecha"
+                DataField="fecha"
+                ItemStyle.HorizontalAlign="Center"
+                HeaderText="Fecha"/>
+            <com:XActiveBoundColumn
+                ID="monto"
+                DataField="monto"
+                ItemStyle.HorizontalAlign="Right"
+                HeaderText="Monto"/>
+            <com:XActiveBoundColumn
+                ID="estatus"
+                DataField="status"
+                Visible = "false"/>
+                <com:XActiveTemplateColumn
+                ID="detalle"
+                HeaderText="Estatus"
+                ItemStyle.HorizontalAlign="Center"
+                HeaderStyle.Width="100px"
+                >
+                    <prop:ItemTemplate>
+                        <com:TActiveImage ID="estatus_img" ImageUrl="imagenes/iconos/led_00.png" />
+                    </prop:ItemTemplate>
+                </com:XActiveTemplateColumn>
+
+        </com:XActiveDataGrid>
+
+    <br>
+
+                <fieldset Align="Center" width="50%">
+                    <legend>Leyenda.</legend>
+                    <div>
+                        <com:TImage ImageUrl="imagenes/iconos/led_00.png" />
+                        = Pendiente.&nbsp;&nbsp;
+                        <com:TImage ImageUrl="imagenes/iconos/led_01.png" />
+                        = En Revisión.&nbsp;&nbsp;
+                        <com:TImage ImageUrl="imagenes/iconos/led_02.png" />
+                        = Confirmado y Abonado.&nbsp;&nbsp;
+                        <com:TImage ImageUrl="imagenes/iconos/led_03.png" />
+                        = Erróneo / Incorrecto.&nbsp;&nbsp;
+                    <div>
+                </fieldset>
+
+
+</com:TContent>

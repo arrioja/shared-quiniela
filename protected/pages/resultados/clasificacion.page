@@ -1,0 +1,53 @@
+<com:TContent ID="cuerpo">
+<com:MensajeDiv ID="LTB"/>
+
+    <com:XActiveDataGrid
+        ID="DataGrid_top_10"
+        Width="90%"
+        AllowPaging="false"
+        CellPadding="0"
+        CellSpacing="0"
+        GridLines="None"
+        HeaderStyle.BackColor="#29166F"
+        HeaderStyle.ForeColor="white"
+        HeaderStyle.Font.Size = "14px"
+        ItemStyle.BackColor="#BFCFFF"
+        ItemStyle.BorderColor="Black"
+        ItemStyle.Font.Size = "18px"
+        DataKeyField="id"
+        AlternatingItemStyle.BackColor="#E6ECFF"
+        AutoGenerateColumns="false"
+        OnItemDataBound="formatear"
+        ForeColor="black"
+        Caption="Quien esta punteando?"
+        BorderColor="black"
+        >
+        <com:XActiveBoundColumn
+            ID="cod_pago"
+            DataField="cod_pago"
+            ItemStyle.HorizontalAlign="Center"
+            ItemStyle.Font.Size = "16px"
+            HeaderText="Quiniela"/>
+        <com:XActiveBoundColumn
+            ID="cedula"
+            DataField="cedula"
+            ItemStyle.HorizontalAlign="Center"
+            ItemStyle.Font.Size = "16px"
+            HeaderText="Cédula"/>
+        <com:XActiveBoundColumn
+            ID="nombre"
+            DataField="nombres"
+            ItemStyle.HorizontalAlign="Center"
+            ItemStyle.Font.Size = "16px"
+            HeaderText="Nombre"/>
+        <com:XActiveBoundColumn
+            ID="puntos"
+            DataField="puntos"
+            ItemStyle.HorizontalAlign="Center"
+            ItemStyle.Font.Size = "16px"
+            HeaderText="Pts"/>
+    </com:XActiveDataGrid>
+
+VERDE = Su lugar en la clasificación
+
+</com:TContent>

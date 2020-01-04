@@ -1,0 +1,123 @@
+<com:TContent ID="cuerpo">
+<com:MensajeDiv ID="LTB"/>
+        <com:XActiveDataGrid
+            ID="DataGrid"
+            Width="90%"
+            AllowPaging="false"
+            CellPadding="0"
+            CellSpacing="0"
+            GridLines="None"
+            HeaderStyle.BackColor="#29166F"
+            HeaderStyle.ForeColor="white"
+            HeaderStyle.Font.Size = "16px"
+            ItemStyle.BackColor="#BFCFFF"
+            ItemStyle.BorderColor="Black"
+            
+            DataKeyField="id"
+            AlternatingItemStyle.BackColor="#E6ECFF"
+            AutoGenerateColumns="false"
+            OnItemDataBound="formatear"
+            ForeColor="black"
+            Caption="Listado de Partidos y sus Resultados"
+            BorderColor="black"
+
+
+            OnItemCreated="itemCreated"
+            OnEditCommand="editItem"
+            OnUpdateCommand="saveItem"
+            OnCancelCommand="cancelItem"
+
+
+            >
+            <com:XActiveBoundColumn
+                ID="grupo"
+                DataField="grupo"
+                ReadOnly="True"
+                ItemStyle.HorizontalAlign="Center"
+                ItemStyle.Font.Size = "14px"
+                HeaderText="Grp"/>
+
+            <com:XActiveBoundColumn
+                ID="cod_partido"
+                DataField="cod_partido"
+                ItemStyle.HorizontalAlign="Center"
+                Visible = "False"
+                HeaderText="cod_partido"/>
+
+            <com:XActiveBoundColumn
+                ID="cod_ganador_oficial"
+                DataField="cod_ganador_oficial"
+                ItemStyle.HorizontalAlign="Center"
+                Visible = "False"
+                HeaderText="cod_ganador_oficial"/>
+                
+            <com:XActiveBoundColumn
+                ID="nombreequipoa"
+                DataField="nombre_equipo_a"
+                ItemStyle.HorizontalAlign="Center"
+                ItemStyle.Font.Size = "14px"
+                ReadOnly="True"
+                HeaderText="Equipo 1"/>
+
+            <com:XActiveBoundColumn
+                ID="equipoa"
+                DataField="cod_equipo_a"
+                ItemStyle.HorizontalAlign="Center"
+                Visible = "false"
+                ReadOnly="True"
+                HeaderText="equipoa"/>
+
+            <com:XActiveBoundColumn
+                ID="nombreequipob"
+                DataField="nombre_equipo_b"
+                ItemStyle.HorizontalAlign="Center"
+                ItemStyle.Font.Size = "14px"
+                ReadOnly="True"
+                HeaderText="Equipo 2"/>
+
+            <com:XActiveBoundColumn
+                ID="equipob"
+                DataField="cod_equipo_b"
+                ItemStyle.HorizontalAlign="Center"
+                Visible = "false"
+                ReadOnly="True"
+                HeaderText="equipob"/>
+
+            <com:XActiveBoundColumn
+                ID="equipo_ganador"
+                Visible = "False"
+                DataField="cod_ganador"
+                ItemStyle.HorizontalAlign="Center"
+                ItemStyle.Font.Size = "14px"
+                HeaderText="Ganador"/>
+
+            <com:XActiveBoundColumn
+                ID="puntos"
+                Visible = "true"
+                DataField="puntos"
+                ItemStyle.HorizontalAlign="Center"
+                ItemStyle.Font.Size = "14px"
+                ReadOnly="True"
+                HeaderText="Puntos"/>
+                
+            <com:XActiveDropDownListColumn
+                ID="elegir"
+                HeaderText="Elija su Ganador"
+                DataTextField="nombre_ganador"
+                ItemStyle.Font.Size = "14px"
+                ItemStyle.HorizontalAlign="Center"/>
+            <com:TEditCommandColumn
+                HeaderText=""
+                ID="Elija"
+                HeaderStyle.Width="50px"
+                UpdateText="Guardar"
+                ItemStyle.HorizontalAlign="Center"
+                ItemStyle.Font.Italic="false"
+                CancelText="Cancelar"
+                EditText="Elija"
+                />
+        </com:XActiveDataGrid>
+
+VERDE = GANADOR, ROJO = PERDEDOR, AMARILLO = EMPATE.
+
+</com:TContent>

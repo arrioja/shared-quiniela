@@ -1,0 +1,48 @@
+.descripcion_listados {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 10px;
+}
+
+.info_adicional_listados {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+.titulos_listados {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.titulos_info {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+    font-weight: bold;
+	font-size: 20px;
+}
+
+.precio_info{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+    font-weight: bold;
+    color: #cb1212;
+	font-size: 18px;
+}
+
+.precio_listado{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+    font-weight: bold;
+    color: #cb1212;
+	font-size: 16px;
+}
+
+.precio_listado_ppal{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: normal;
+    font-weight: bold;
+    color: #cb1212;
+	font-size: 14px;
+}

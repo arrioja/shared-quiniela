@@ -1,0 +1,80 @@
+<com:TContent ID="cuerpo">
+
+<div align="center">
+<br><br><br><br><br>
+ <fieldset Align="Center" width="100%">
+    <legend>Envíenos sus comentario, dudas, sugerencias, etc.</legend>
+    <com:TTable BorderWidth="1" GridLines="Both" Width="100%">
+
+        <com:TTableRow BorderWidth="1">
+            <com:TTableCell CssClass="titulos_claro_1">
+                <com:TLabel Text="Nombre:"/>
+            </com:TTableCell>
+            <com:TTableCell CssClass="datos_claro_1">
+                <com:TActiveTextBox ID="txt_nombre"
+                    MaxLength="50"
+                    Columns="50"/>
+                <com:TRequiredFieldValidator ID="val_nombre"
+                    ControlToValidate="txt_nombre"
+                    ErrorMessage="Requerido."
+                    Display="Dynamic"/>
+            </com:TTableCell>
+        </com:TTableRow>
+
+        <com:TTableRow BorderWidth="1">
+            <com:TTableCell CssClass="titulos_claro_1">
+                <com:TLabel Text="E-mail:"/>
+            </com:TTableCell>
+            <com:TTableCell CssClass="datos_claro_1" ColumnSpan="3">
+                <com:TActiveTextBox ID="txt_email"
+                    Columns="50"
+                    MaxLength="200"/>
+            </com:TTableCell>
+        </com:TTableRow>
+     
+        <com:TTableRow BorderWidth="1">
+            <com:TTableCell CssClass="titulos_claro_1">
+                <com:TLabel Text="Su Comentario:"/>
+            </com:TTableCell>
+            <com:TTableCell CssClass="datos_claro_1" ColumnSpan="3">
+                <com:TTextBox ID="txt_comentario" TextMode="MultiLine" Rows="6" Columns="80">
+                </com:TTextBox>
+            </com:TTableCell>
+        </com:TTableRow>
+
+        <com:TTableRow BorderWidth="1" VerticalAlign="Middle">
+            <com:TTableCell CssClass="titulos_claro_1">
+                <com:TLabel Text="Imágen Código:"/>
+            </com:TTableCell>
+            <com:TTableCell ColumnSpan="3" CssClass="datos_claro_1">
+                <com:TCaptcha ID="captcha"
+                    MaxTokenLength="5"
+                    MinTokenLength="5"
+                    CaseSensitive="true"
+                    TokenExpiry="300"
+                    TokenAlphabet="ABCDEFGHIJKLMOPQRSTUVWXYZ1234567890"
+                    TokenImageTheme ="9"/>
+                <com:TActiveTextBox ID="txt_captcha"
+                    Columns="15"
+                    MaxLength="10"/>
+                <com:TCaptchaValidator ID="captcha_val"
+                   ControlToValidate="txt_captcha"
+                   CaptchaControl="captcha"
+                   ErrorMessage="C&oacute;digo de im&aacute;gen incorrecto"
+                   Display="Dynamic"/>
+
+            </com:TTableCell>
+        </com:TTableRow>
+
+        <com:TTableRow>
+            <com:TTableCell HorizontalAlign="Right" ColumnSpan="4">
+                <com:TActiveButton ID="btn_incluir"
+                    Text="Enviar"
+                    OnCallBack="btn_incluir_click"/>
+            </com:TTableCell>
+        </com:TTableRow>
+    </com:TTable>
+</fieldset>
+</div>
+<br><br><br><br>
+</com:TContent>

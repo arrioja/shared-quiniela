@@ -1,0 +1,69 @@
+<com:TContent ID="cuerpo">
+<div align="center">
+<com:XActiveDataGrid
+	ID="DataGrid"
+	AllowPaging="true"
+	Width="90%"
+	PageSize="20"
+	PagerStyle.Mode="Numeric"
+	PagerStyle.HorizontalAlign="Center"
+	CellPadding="0"
+	CellSpacing="0"
+	GridLines="Both"
+	HeaderStyle.BackColor="#29166F"
+	HeaderStyle.ForeColor="white"
+	ItemStyle.BackColor="#BFCFFF"
+	ItemStyle.BorderColor="white"
+	DataKeyField="id"
+    OnItemDataBound="formatear"
+	AlternatingItemStyle.BackColor="#E6ECFF"
+	AutoGenerateColumns="false"
+    Caption="Listado de Usuarios"
+    ForeColor="black"
+    BorderColor="black"
+    EmptyTemplate="<div style='font-size:14px;
+                           color:#FF0000;
+                           height:100px;
+                           font-weight:bold;
+                           vertical-align:middle;
+                           padding-top:40px;'>
+                <br>Listado de Usuarios. <br><br>
+                No existen usuarios inscritos.</div>"
+	>
+		<com:XActiveBoundColumn
+		ID="cedula"
+		HeaderText="Cédula"
+		DataField="cedula"
+        ItemStyle.HorizontalAlign="Center"
+		/>
+		<com:XActiveBoundColumn
+		ID="apellido"
+		HeaderText="Nombres y Apellidos"
+		DataField="nomb"
+		/>
+        <com:XActiveBoundColumn
+		ID="login"
+		HeaderText="Login"
+		DataField="login"
+        ItemStyle.HorizontalAlign="Center"
+		/>
+        <com:XActiveBoundColumn
+		ID="telefono1"
+		HeaderText="Telefono"
+		DataField="telefono1"
+		/>
+        <com:XActiveBoundColumn
+		ID="telefono2"
+		HeaderText="Telefono"
+		DataField="telefono2"
+		/>
+        <com:XActiveBoundColumn
+		ID="email"
+		HeaderText="Email"
+		DataField="email"
+		/>
+
+</com:XActiveDataGrid>
+</div>
+
+</com:TContent>

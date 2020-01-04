@@ -1,0 +1,109 @@
+<com:TContent ID="cuerpo">
+<div align="center">
+
+<br>
+        <com:XActiveDataGrid
+            ID="DataGrid2"
+            Width="90%"
+            AllowPaging="true"
+            PagerStyle.Mode="Numeric"
+            PagerStyle.HorizontalAlign="Center"
+            PageSize="20"
+            CellPadding="0"
+            CellSpacing="0"
+            GridLines="None"
+            HeaderStyle.BackColor="#29166F"
+            HeaderStyle.ForeColor="white"
+            HeaderStyle.Font.Size = "14px"
+            ItemStyle.BackColor="#BFCFFF"
+            ItemStyle.BorderColor="Black"
+            ItemStyle.Font.Size = "12px"
+            DataKeyField="id"
+            AlternatingItemStyle.BackColor="#E6ECFF"
+            AutoGenerateColumns="false"
+            OnPageIndexChanged="changePage"
+            OnPagerCreated="pagerCreated"
+            OnItemDataBound="formatear2"
+            ForeColor="black"
+            Caption="Listado de Pagos registrados"
+            BorderColor="black"
+            EmptyTemplate="<div style='font-size:14px;
+                       color:#FF0000;
+                       height:100px;
+                       font-weight:bold;
+                       vertical-align:middle;'>
+            <br>Listado de Gerencias. <br><br>
+            No tiene Quinielas Disponibles, ingrese en la opción: Pagos / Cupones.</div>"
+            >
+            <com:XActiveBoundColumn
+                ID="numero2"
+                DataField="numero"
+                ItemStyle.HorizontalAlign="Center"
+                HeaderText="Voucher / Registro"/>
+            <com:XActiveBoundColumn
+                ID="fecha2"
+                DataField="fecha"
+                ItemStyle.HorizontalAlign="Center"
+                HeaderText="Fecha"/>
+            <com:XActiveBoundColumn
+                ID="monto2"
+                DataField="monto"
+                ItemStyle.HorizontalAlign="Right"
+                HeaderText="Monto"/>
+            <com:XActiveBoundColumn
+                ID="estatus2"
+                DataField="status"
+                Visible = "false"/>
+                <com:XActiveTemplateColumn
+                ID="detalle2"
+                HeaderText="Estatus"
+                ItemStyle.HorizontalAlign="Center"
+                HeaderStyle.Width="100px"
+                >
+                    <prop:ItemTemplate>
+                        <com:TActiveImage ID="estatus_img2" ImageUrl="imagenes/iconos/led_00.png" />
+                    </prop:ItemTemplate>
+                </com:XActiveTemplateColumn>
+
+                <com:XActiveTemplateColumn
+                ID="acciones2"
+                HeaderText="Ir a Quiniela"
+                ItemStyle.HorizontalAlign="Center"
+                HeaderStyle.Width="110px"
+                >
+                    <prop:ItemTemplate>
+                        
+                        <com:TActiveLinkButton ID="btn2_3" CommandParameter="<%# $this->Parent->DataItem['cod_pago'] %>" Text="<img src='imagenes/iconos/editar.png' border='0' />" OnClick="Page.click_btn2_3" />
+                    </prop:ItemTemplate>
+                </com:XActiveTemplateColumn>
+
+        </com:XActiveDataGrid>
+
+
+                <fieldset Align="Center" width="50%">
+                    <legend>Leyenda.</legend>
+                    <div>
+                        <com:TImage ImageUrl="imagenes/iconos/led_00.png" />
+                        = Pendiente.&nbsp;&nbsp;
+                        <com:TImage ImageUrl="imagenes/iconos/led_01.png" />
+                        = En Revisión.&nbsp;&nbsp;
+                        <com:TImage ImageUrl="imagenes/iconos/led_02.png" />
+                        = Confirmado y Abonado.&nbsp;&nbsp;
+                        <com:TImage ImageUrl="imagenes/iconos/led_03.png" />
+                        = Erróneo / Incorrecto.&nbsp;&nbsp;
+                    <div>
+                </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</com:TContent>

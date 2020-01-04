@@ -1,0 +1,78 @@
+<com:TContent ID="cuerpo">
+<com:MensajeDiv ID="LTB"/>
+        <com:XActiveDataGrid
+            ID="DataGrid"
+            Width="90%"
+            AllowPaging="false"
+            CellPadding="0"
+            CellSpacing="0"
+            GridLines="None"
+            HeaderStyle.BackColor="#29166F"
+            HeaderStyle.ForeColor="white"
+            HeaderStyle.Font.Size = "18px"
+            ItemStyle.BackColor="#BFCFFF"
+            ItemStyle.BorderColor="Black"
+            
+            DataKeyField="id"
+            AlternatingItemStyle.BackColor="#E6ECFF"
+            AutoGenerateColumns="false"
+            OnItemDataBound="formatear"
+            ForeColor="black"
+            Caption="Listado de Partidos y sus Resultados"
+            BorderColor="black"
+
+            >
+            <com:XActiveBoundColumn
+                ID="grupo"
+                DataField="grupo"
+                ItemStyle.HorizontalAlign="Center"
+                ItemStyle.Font.Size = "16px"
+                HeaderText="Grupo"/>
+            <com:XActiveBoundColumn
+                ID="cod_partido"
+                DataField="cod_partido"
+                ItemStyle.HorizontalAlign="Center"
+                Visible = "False"
+                HeaderText="cod_partido"/>
+            <com:XActiveBoundColumn
+                ID="equipoa"
+                DataField="cod_equipo_a"
+                ItemStyle.HorizontalAlign="Center"
+                Visible = "False"
+                HeaderText="Equipo"/>
+            <com:XActiveBoundColumn
+                ID="equipob"
+                DataField="cod_equipo_b"
+                ItemStyle.HorizontalAlign="Center"
+                Visible = "False"
+                HeaderText="Equipo"/>
+            <com:XActiveBoundColumn
+                ID="nombreequipoa"
+                DataField="nombre_equipo_a"
+                ItemStyle.HorizontalAlign="Center"
+                ItemStyle.Font.Size = "16px"
+                HeaderText="Equipo 1"/>
+            <com:XActiveBoundColumn
+                ID="nombreequipob"
+                DataField="nombre_equipo_b"
+                ItemStyle.HorizontalAlign="Center"
+                ItemStyle.Font.Size = "16px"
+                HeaderText="Equipo 2"/>
+            <com:XActiveBoundColumn
+                ID="resultado"
+                DataField="resultado"
+                ItemStyle.HorizontalAlign="Center"
+                ItemStyle.Font.Size = "16px"
+                HeaderText="Resultado"/>
+            <com:XActiveBoundColumn
+                ID="equipo_ganador"
+                Visible = "False"
+                DataField="cod_ganador"
+                ItemStyle.HorizontalAlign="Center"
+                ItemStyle.Font.Size = "16px"
+                HeaderText="Ganador"/>
+        </com:XActiveDataGrid>
+
+VERDE = GANADOR, ROJO = PERDEDOR, AMARILLO = EMPATE.
+
+</com:TContent>

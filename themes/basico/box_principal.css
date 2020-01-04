@@ -1,0 +1,21 @@
+.zxwidth_a {width:95%;}
+.zxwidth_b {width:95%;}
+.zxwidth_u {width:95%;}
+
+.zxtop, .zxbottom {display:block; background:transparent; font-size:1px;}
+.zxb1, .zxb2, .zxb3, .zxb4 {display:block; overflow:hidden;}
+.zxb1, .zxb2, .zxb3 {height:1px;}
+.zxb2, .zxb3, .zxb4 {background:#fff; border-left:1px solid #444; border-right:1px solid #444;}
+.zxb1 {margin:0 5px; background:#444;}
+.zxb2 {margin:0 3px; border-width:0 2px;}
+.zxb3 {margin:0 2px;}
+.zxb4 {height:2px; margin:0 1px;}
+
+.zxboxcontent {display:block; border:0 solid #444; border-width:0 1px; height:auto; text-align:center;}
+* html .zxboxcontent {height:1px;}
+
+.zcolor_a {background:#ff0000; color:#fff;}
+.zcolor_b {background:#e4f6fc; color:#000;}
+.zcolor_c {background:#ffed3c; color:#fff;}
+.zcolor_d {background:#0030ff; color:#000;}
+.zcolor_verde {background:#24ff00; color:#000;}

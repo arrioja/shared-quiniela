@@ -1,0 +1,5 @@
+nbproject
+nbproject/**/*
+assets/**/*
+imagenes/articulos/**/*
+protected/runtime/**/*

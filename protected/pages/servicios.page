@@ -1,0 +1,46 @@
+<com:TContent ID="cuerpo">
+<div align="center">
+    <com:TTable BorderColor="#ccc" BorderWidth="0"
+    GridLines="None" Width="95%">
+        <com:TTableRow BorderWidth="1" HorizontalAlign="Justify">
+            <com:TTableCell>
+                
+                Jugar a la <strong>Quiniela Mundial 2010</strong> es muy fácil solo hay que seguir los siguientes pasos:
+                <li> 1.- Inscribirte en nuestra página
+                <li> 2.- Una vez inscrito, participar con tu apuesta.
+                <li> 3.- Llenar tu quiniela.
+                <li> 4.- Si los equipos que escogiste ganan suficientes partidos tu podrás ganar mucho dinero!. </li>
+                <br>
+
+                A diferencia de otras quinielas en donde el pote es menor, aqui el aporte para el pote es del 70%, es decir,
+                por cada quiniela que juegues con nosotros, <strong>inviertes Bs.F 100,oo,</strong> que serán repartidos de esta manera:
+                <strong>Bs.F 30,oo </strong>/
+                que son realmente <strong>tu inscripción </strong>(tu derecho al juego) y <strong>Bs.F 70,oo es tu aporte al POTE </strong>
+                de la quiniela.  Una sola persona puede participar con varias quinielas, mientras mas tengas, mas oportunidades
+                tendrás de ganar!.<br><br>
+
+                La quiniela que está a punto de jugar está ambientada en el Mundial de Fútbol SurAfrica 2010, y se juega durante
+                los 48 juegos de la fase de grupos (antes de llegar a 8vos de Final). El jugador (osea Usted), debe seleccionar de
+                una manera muy sencilla quien cree que ganará en dichos juegos,
+                entre tres simples opciones: Gana el equipo 1, Gana el equipo 2 o Empatan.  Ésa es otra maravilla de esta quiniela,
+                que no tiene que preocuparse por los goles que metan los equipos, sino que simplemente debe decir que equipo
+                piensa usted que ganará el partido.<br><br>
+
+                La quiniela la ganará aquel jugador que haya alcanzado la mayor cantidad de puntos (48 puntos como máximo); en caso de
+                existir un empate en el primer lugar, el monto del POTE se repartirá equitativamente entre los jugadores empatados.<br>
+
+                <h2>El pago se recibe en efectivo o en depósito o transferencia electrónica:<br>
+                Banco: Bancaribe, Cuenta Corriente Número: 0114-0531-21-5310825826<br>
+                A nombre de: Avila Super Sports C.A.</h2>
+                Para mayor Información o Pago en efectivo: Carlos Ávila 0426-5960520 <br>
+                <strong>Todas las inscripciones de quinielas finalizarán el 10 de Junio de 2010.</strong>
+
+
+
+            </com:TTableCell>
+        </com:TTableRow>
+    </com:TTable>
+<br>
+
+</div>
+</com:TContent>

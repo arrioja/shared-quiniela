@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application id="quiniela_mundial_2010" mode="Debug">
+  <!-- alias definitions and namespace usings
+  <paths>
+    <alias id="myalias" path="./lib" />
+    <using namespace="Application.common.*" />
+  </paths>
+  -->
+
+  <paths>
+    <using namespace="Application.db.*" />
+    <using namespace="Application.comunes.autenticacion" />
+    <using namespace="Application.comunes.utilidades" />
+    <using namespace="Application.comunes.fechas" />
+    <using namespace="Application.comunes.funciones_db" />
+    <using namespace="Application.comunes.controles" />
+    <using namespace="Application.clases.*" />
+    <using namespace="Application.controles.*" /> 
+    <using namespace="System.Web.UI.ActiveControls.*"/>
+  </paths>
+  <!-- configurations for modules -->
+  <modules>
+    <!-- Remove this comment mark to enable caching
+    <module id="cache" class="System.Caching.TDbCache" />
+    -->
+  <module id="db" class="System.Data.TDataSourceConfig">
+  <database ConnectionString="mysql:host=localhost;dbname=quiniela" Username="quinielausr" Password="JmIQuInIeLa2010jDffvG"/>
+  </module>
+<!--
+  <module class="System.Data.ActiveRecord.TActiveRecordConfig" ConnectionID="db" />
+-->
+    <!-- Remove this comment mark to enable PATH url format
+    <module id="request" class="THttpRequest" UrlFormat="Path" />
+    -->
+
+    <!-- Remove this comment mark to enable logging
+    <module id="log" class="System.Util.TLogRouter">
+      <route class="TBrowserLogRoute" Categories="System" />
+    </module>
+    -->
+  </modules>
+
+  <!-- configuration for available services -->
+  <services>
+    <service id="page" class="TPageService" DefaultPage="Home">
+    <pages MasterClass="Application.layouts.normal.normal_layout" Theme="basico" />
+    </service>
+  </services>
+
+  <!-- application parameters
+  <parameters>
+    <parameter id="param1" value="value1" />
+    <parameter id="param2" value="value2" />
+  </parameters>
+  -->
+</application>
